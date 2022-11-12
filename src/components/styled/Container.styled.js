@@ -11,3 +11,17 @@ display: ${({display}) => display};
 justify-content: ${({justifyContent}) => justifyContent};
 align-items: ${({alignItems}) => alignItems};
 `
+
+export const Flex = styled.div`
+    display: flex; 
+    text-align: center;
+    flex-direction: ${({fd}) => fd};
+    justify-content: ${({jc}) => jc};
+    align-items: ${({ai}) => ai};
+    align-content: ${({ac}) => ac};
+    margin: ${({margin}) => margin};
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+    }
+`

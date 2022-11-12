@@ -45,3 +45,29 @@ export const HeaderContainer = styled.div`
     justify-content: space-around;
     border: 1px solid black;
 `
+
+export const FeatureCard = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    border-radius: 3px;
+    background-color: ${({bg}) => bg};
+
+    h4 {
+        font-size: 1.4em;
+        padding-top: 15px;
+    }
+
+    p {
+        margin: 0px 25px 15px 25px;
+    }
+
+    img {
+        max-width: 80%;
+        margin-top: 25px;
+        border-radius: 2px;
+    }
+
+`
