@@ -31,7 +31,7 @@ export const NavLi = styled.li`
     text-decoration: none;
 `
 
-export const Header = styled.header`
+export const SectionWrapper = styled.header`
     background-color: ${({bg}) => bg};
     margin-top: 60px;
 `
