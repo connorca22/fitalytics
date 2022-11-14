@@ -2,7 +2,7 @@ import { SectionWrapper, HeaderContainer } from "../styled/Home.styled"
 
 export default function HomeHeader() {
     return (
-    <SectionWrapper bg='pink'>
+    <SectionWrapper bg='pink' marginTop="60px">
         <HeaderContainer>
             <div style={{width: "50%", border: "1px solid black", display: "flex", flexDirection: "column", alignItems: "center", backgroundColor: "white"}}>
                 <h1 style={{margin: "15px 15px"}}>FITALYTICS</h1>

@@ -31,9 +31,9 @@ export const NavLi = styled.li`
     text-decoration: none;
 `
 
-export const SectionWrapper = styled.header`
+export const SectionWrapper = styled.div`
     background-color: ${({bg}) => bg};
-    margin-top: 60px;
+    margin-top: ${({marginTop}) => marginTop};
 `
 
 export const HeaderContainer = styled.div`
@@ -70,4 +70,40 @@ export const FeatureCard = styled.div`
         border-radius: 2px;
     }
 
+`
+
+export const Btn = styled.button`
+    width: 60%;
+    padding: 8px 0px 8px 0px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    margin-top: 20px;
+
+    @media screen and (min-width: 750px) {
+        width: 40%;
+        margin-top: 35px;
+    }
+
+`
+
+
+export const Form = styled.form`
+    padding: 15px;
+    text-align: center;
+    border-radius: 3px;
+    margin-bottom: 30px;
+
+    input, textarea {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 1.3em;
+        border: 1px solid black;
+        padding-left: 5px;
+    }
+    ::placeholder { 
+    color: black;
+    opacity: 0.6; 
+  }
 `
