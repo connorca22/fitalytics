@@ -4,6 +4,8 @@ import HomeHeader from "./homeComponents/HomeHeader"
 import AppFeatures from "./homeComponents/AppFeatures"
 import Join from "./homeComponents/Join"
 import Contact from "./homeComponents/Contact"
+import FooterNav from "./homeComponents/FooterNav"
+
 
 export default function Home() {
     return (
@@ -13,6 +15,7 @@ export default function Home() {
             <AppFeatures />
             <Join />
             <Contact />
+            <FooterNav />
         </>
     )
 } 

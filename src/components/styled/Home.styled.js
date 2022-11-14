@@ -27,7 +27,7 @@ export const NavUl = styled.ul`
 `
 
 export const NavLi = styled.li`
-    margin-left: 8px;
+    margin-left: 30px;
     text-decoration: none;
 `
 
@@ -43,7 +43,6 @@ export const HeaderContainer = styled.div`
     text-align: center;
     min-height: 400px;
     justify-content: space-around;
-    border: 1px solid black;
 `
 
 export const FeatureCard = styled.div`
