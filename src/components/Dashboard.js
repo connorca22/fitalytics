@@ -1,7 +1,10 @@
+import { SectionWrapper } from "./styled/Container.styled"
 
-
-export default function Dashboard() {
+export default function Dashboard({user}) {
     return (
-        <h1>Dashboard</h1>
+        <SectionWrapper>
+            <h1 style={{marginTop: "60px"}}>Dashboard</h1>
+            <p>Welcome {user.user_id}</p>
+        </SectionWrapper>
     )
 } 

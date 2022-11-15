@@ -1,4 +1,5 @@
-import { SectionWrapper, HeaderContainer } from "../styled/Home.styled"
+import { HeaderContainer } from "../styled/Home.styled"
+import { SectionWrapper } from "../styled/Container.styled"
 
 export default function HomeHeader() {
     return (

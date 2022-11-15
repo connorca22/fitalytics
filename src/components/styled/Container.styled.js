@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+export const SectionWrapper = styled.div`
+    background-color: ${({bg}) => bg};
+    margin-top: ${({marginTop}) => marginTop};
+`
+
 export const Container = styled.div`
 max-width: 1100px;
 margin: 0 auto;

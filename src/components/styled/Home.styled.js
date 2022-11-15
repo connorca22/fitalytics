@@ -31,11 +31,6 @@ export const NavLi = styled.li`
     text-decoration: none;
 `
 
-export const SectionWrapper = styled.div`
-    background-color: ${({bg}) => bg};
-    margin-top: ${({marginTop}) => marginTop};
-`
-
 export const HeaderContainer = styled.div`
     display: flex;
     flex-direction: column;

@@ -1,5 +1,4 @@
-import { Container, Flex } from "../styled/Container.styled"
-import { SectionWrapper } from "../styled/Home.styled"
+import { Container, Flex, SectionWrapper } from "../styled/Container.styled"
 import Card from "./Card"
 
 

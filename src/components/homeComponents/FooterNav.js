@@ -1,4 +1,3 @@
-import {Container} from "../styled/Container.styled";
 import {Nav, NavContainer, NavUl, NavLi} from "../styled/Home.styled"; 
 import {NavLink} from 'react-router-dom'
 

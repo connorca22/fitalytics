@@ -1,6 +1,6 @@
-import { Container, Flex } from "../styled/Container.styled"
+import { Container, Flex, SectionWrapper } from "../styled/Container.styled"
 import { Link } from "react-router-dom"
-import { SectionWrapper, Btn } from "../styled/Home.styled"
+import { Btn } from "../styled/Home.styled"
 
 export default function Join() {
 

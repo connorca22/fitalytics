@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { Container, Flex } from "../styled/Container.styled"
-import { SectionWrapper, Form} from "../styled/Home.styled"
+import { Container, Flex, SectionWrapper } from "../styled/Container.styled"
+import { Form} from "../styled/Home.styled"
 
 export default function Contact() {
     
