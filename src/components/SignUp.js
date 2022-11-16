@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import { SectionWrapper, Flex, Container } from './styled/Container.styled'
 import {AuthForm} from './styled/Home.styled'
-import {signUp} from '../config/api'
+import {signUp} from '../services/authServices'
 
 export default function SignUp() {
     const initialState = {
