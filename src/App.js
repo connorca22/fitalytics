@@ -61,33 +61,5 @@ function App() {
 
 
 
-  // return (
-  //   <Router>
-  //       <GlobalStyles />
-  //     <Routes>
-  //       <Route path='/' element={<SharedLayout />}>
-  //         <Route index element={<Home />}></Route>
-  //         <Route path='sign-up' element={< SignUp />} />
-  //         <Route path='sign-in' element={< SignIn />} /> 
-  //         <Route path='*' element={
-  //           <ProtectedRoute user={user}>
-  //             <Routes>
-  //               <Route path='dashboard' element={ <Dashboard user={user} />} /> 
-  //             </Routes>
-  //           </ProtectedRoute>
-  //         }>
-  //         </Route>
-  //         <Route path="*" element={ < Error/>} />
-  //       </Route>
-  //     </Routes>
-  //   </Router>
-  // );
-  // }
-  
-  // export default App;
-
-
-
-
 
 

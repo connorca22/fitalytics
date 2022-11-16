@@ -21,7 +21,6 @@ export default function SignIn() {
     }
 
     const {dispatch, store} = useGlobalState() 
-    const {currentUser, authToken} = store
     const navigate = useNavigate()
 
     function onFormSubmit(event) {
@@ -33,8 +32,6 @@ export default function SignIn() {
             dispatch({type: 'setToken', data: token})
             navigate('/dashboard')
         })
-        console.log(currentUser)
-        console.log(authToken)
     }
 
     return (
