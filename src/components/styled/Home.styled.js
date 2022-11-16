@@ -101,3 +101,26 @@ export const Form = styled.form`
     opacity: 0.6; 
   }
 `
+
+export const AuthForm = styled.form`
+padding: 15px;
+text-align: center;
+border-radius: 3px;
+margin: 30px 15%;
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-left: 5px;
+}
+input[type="submit"] {
+    border: none;
+}
+::placeholder { 
+    color: black;
+    opacity: 0.6; 
+}
+`
