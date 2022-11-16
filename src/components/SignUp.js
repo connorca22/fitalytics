@@ -2,6 +2,8 @@ import {useState} from 'react'
 import { SectionWrapper, Flex, Container } from './styled/Container.styled'
 import {AuthForm} from './styled/Home.styled'
 import {signUp} from '../services/authServices'
+import { useGlobalState } from '../utils/stateContext'
+import {useNavigate} from 'react-router-dom'
 
 export default function SignUp() {
     const initialState = {
@@ -20,10 +22,18 @@ export default function SignUp() {
         })
     }
 
+    const {dispatch, store} = useGlobalState() 
+    const navigate = useNavigate()
+
     function onFormSubmit(event) {
         event.preventDefault()
         signUp(userDetails)
-        console.log('submitted')
+        .then(({token, username}) => {
+            localStorage.setItem("token", token)
+            dispatch({type: 'setUsername', data: username})
+            dispatch({type: 'setToken', data: token})
+            navigate('/dashboard')
+        })
     }
     
     return (

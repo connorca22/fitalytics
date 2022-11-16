@@ -8,6 +8,9 @@ import Dashboard from "./components/Dashboard"
 import Error from "./components/Error"
 import ProtectedRoute from "./components/ProtectedRoute";
 import AddWorkout from './components/AddWorkout'
+import {useReducer} from 'react'
+import stateReducer from './utils/stateReducer'
+import {StateContext} from './utils/stateContext'
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -18,31 +21,40 @@ function App() {
     user_id: 5454
   }
 
-  return (
-    <Router>
-        <GlobalStyles />
-      <Routes>
-        <Route path='/' element={<SharedLayout />}>
-          <Route index element={<Home />}></Route>
-          <Route path='sign-up' element={< SignUp />} />
-          <Route path='sign-in' element={< SignIn />} /> 
-          <Route path="*" element={<Error/>} />
-          <Route path='dashboard/*' element={
-            <ProtectedRoute user={user}>
-              <Routes>
-                  <Route index element={<Dashboard user={user}/>}></Route>
-                  <Route path='add-workout' element={<AddWorkout />}></Route>
-                  <Route path="*" element={ < Error/>} />
-              </Routes>
-            </ProtectedRoute>
-          }>
-          </Route>
-          
-        </Route>
-      </Routes>
-    </Router>
-  );
+  const initialState = {
+    currentUser: null,
+    authToken: {token: null}
   }
+
+  const [store, dispatch] = useReducer(stateReducer, initialState)
+
+  return (
+    <StateContext.Provider value={{store, dispatch}}>
+      <Router>
+          <GlobalStyles />
+        <Routes>
+          <Route path='/' element={<SharedLayout />}>
+            <Route index element={<Home />}></Route>
+            <Route path='sign-up' element={< SignUp />} />
+            <Route path='sign-in' element={< SignIn />} /> 
+            <Route path="*" element={<Error/>} />
+            <Route path='dashboard/*' element={
+              <ProtectedRoute user={user}>
+                <Routes>
+                    <Route index element={<Dashboard user={user}/>}></Route>
+                    <Route path='add-workout' element={<AddWorkout />}></Route>
+                    <Route path="*" element={ < Error/>} />
+                </Routes>
+              </ProtectedRoute>
+            }>
+            </Route>
+            
+          </Route>
+        </Routes>
+      </Router>
+    </StateContext.Provider>
+  );
+}
   
   export default App;
 
