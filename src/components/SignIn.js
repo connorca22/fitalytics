@@ -28,6 +28,7 @@ export default function SignIn() {
         signIn(userDetails)
         .then(({token, username}) => {
             localStorage.setItem("token", token)
+            localStorage.setItem("username", username)
             dispatch({type: 'setUsername', data: username})
             dispatch({type: 'setToken', data: token})
             navigate('/dashboard')

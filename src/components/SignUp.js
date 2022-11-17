@@ -22,7 +22,7 @@ export default function SignUp() {
         })
     }
 
-    const {dispatch, store} = useGlobalState() 
+    const {dispatch} = useGlobalState() 
     const navigate = useNavigate()
 
     function onFormSubmit(event) {
@@ -30,6 +30,7 @@ export default function SignUp() {
         signUp(userDetails)
         .then(({token, username}) => {
             localStorage.setItem("token", token)
+            localStorage.setItem("username", username)
             dispatch({type: 'setUsername', data: username})
             dispatch({type: 'setToken', data: token})
             navigate('/dashboard')

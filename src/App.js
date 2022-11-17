@@ -16,14 +16,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
 
-  const user = {
-    loggedIn: true,
-    user_id: 5454
-  }
 
   const initialState = {
-    currentUser: null,
-    authToken: {token: null}
+    currentUser: localStorage.getItem('username') || null,
+    authToken: {token: localStorage.getItem('token') || null}
   }
 
   const [store, dispatch] = useReducer(stateReducer, initialState)
@@ -39,9 +35,9 @@ function App() {
             <Route path='sign-in' element={< SignIn />} /> 
             <Route path="*" element={<Error/>} />
             <Route path='dashboard/*' element={
-              <ProtectedRoute user={user}>
+              <ProtectedRoute>
                 <Routes>
-                    <Route index element={<Dashboard user={user}/>}></Route>
+                    <Route index element={<Dashboard/>}></Route>
                     <Route path='add-workout' element={<AddWorkout />}></Route>
                     <Route path="*" element={ < Error/>} />
                 </Routes>
@@ -57,6 +53,40 @@ function App() {
 }
   
   export default App;
+
+
+
+
+
+//   return (
+//     <StateContext.Provider value={{store, dispatch}}>
+//       <Router>
+//           <GlobalStyles />
+//         <Routes>
+//           <Route path='/' element={<SharedLayout />}>
+//             <Route index element={<Home />}></Route>
+//             <Route path='sign-up' element={< SignUp />} />
+//             <Route path='sign-in' element={< SignIn />} /> 
+//             <Route path="*" element={<Error/>} />
+//             <Route path='dashboard/*' element={
+//               <ProtectedRoute user={user}>
+//                 <Routes>
+//                     <Route index element={<Dashboard user={user}/>}></Route>
+//                     <Route path='add-workout' element={<AddWorkout />}></Route>
+//                     <Route path="*" element={ < Error/>} />
+//                 </Routes>
+//               </ProtectedRoute>
+//             }>
+//             </Route>
+            
+//           </Route>
+//         </Routes>
+//       </Router>
+//     </StateContext.Provider>
+//   );
+// }
+  
+//   export default App;
 
 
 

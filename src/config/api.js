@@ -6,7 +6,6 @@ const fitalyticsAPI = axios.create({
 
 fitalyticsAPI.interceptors.request.use((req) => {
     const token = localStorage.getItem('token');
-    console.log('set token header:', token);
     if(token) {
         req.headers["Authorization"] = `Bearer ${token}`
     }
