@@ -11,3 +11,7 @@ export async function signIn(data) {
     console.log(response.data)
     return response.data
 }
+
+export async function signOut() {
+    localStorage.clear()
+}

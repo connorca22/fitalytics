@@ -20,7 +20,7 @@ export default function SignIn() {
         })
     }
 
-    const {dispatch, store} = useGlobalState() 
+    const {dispatch} = useGlobalState() 
     const navigate = useNavigate()
 
     function onFormSubmit(event) {
