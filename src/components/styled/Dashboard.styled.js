@@ -36,3 +36,28 @@ export const WorkoutForm = styled.form`
 
 `
 
+export const WorkoutCardFlex= styled.div`
+    display: flex;
+    flex-direction: ${({fd}) => fd};
+    border: ${({border}) => border};
+    justify-content: ${({jc}) => jc};
+    flex-basis: ${({fb}) => fb};
+    align-items: ${({ai}) => ai};
+    text-align: ${({ta}) => ta};
+    
+    img {
+        padding: 3%;
+        flex-basis: 30%;
+        max-width: 30%;
+    }
+    h4 {
+        display: inline;
+    }
+    p {
+        display: inline;
+    }
+    div {
+        margin-top: 1.5%;
+    }
+`
+

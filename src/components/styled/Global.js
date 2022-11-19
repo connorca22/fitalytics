@@ -6,7 +6,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', arial, sans-serif;
-    // border: 1px solid black;
+    border: 1px solid black;
 }
 img {
     max-width: 100%;
