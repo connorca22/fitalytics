@@ -1,17 +1,32 @@
-import { SectionWrapper, Container } from "./styled/Container.styled"
+import {useEffect} from 'react'
+import { SectionWrapper, Container, Flex } from "./styled/Container.styled"
 import { useGlobalState } from "../utils/stateContext";
+import { Link } from 'react-router-dom'
+import { getWorkouts } from "../services/workoutService";
 
 
 export default function Dashboard() {
-    
-    const {store} = useGlobalState();
-    const {currentUser} = store;
+
+    useEffect(() => {
+        getWorkouts()
+        .then((workouts) => {
+            console.log(workouts)
+        })
+    }, [])
+
+
+
+
 
     return (
-        <SectionWrapper>
+        <SectionWrapper style={{marginTop: "60px"}}>
             <Container>
-                <h1 style={{marginTop: "60px"}}>Dashboard</h1>
-                <p>Welcome {currentUser}</p>
+                <Flex jc='space-around' ai='center'> 
+                    <h1>Your Workouts</h1>
+                    <Link to="/dashboard/add-workout"><button style={{padding: "10px"}}>ADD WORKOUT</button></Link>
+                </Flex>
+                <Flex fd="column">
+                </Flex>
             </Container>
         </SectionWrapper>
     )

@@ -38,7 +38,7 @@ export default function SignIn() {
     return (
         <SectionWrapper marginTop="60px">
             <Container>
-                <Flex fd="column"> 
+                <Flex fd="column" border='1px solid black'> 
                     <h1>Sign In</h1>
                     <AuthForm onSubmit={onFormSubmit}>
                         <input type="email" name="email" id="email" value={userDetails.email} onChange={onInputChange} placeholder="Email" required></input>
