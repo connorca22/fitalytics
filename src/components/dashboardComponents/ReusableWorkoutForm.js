@@ -1,7 +1,7 @@
 import { SectionWrapper, Flex, Container } from "../styled/Container.styled"
 import { WorkoutForm, FormInputFlex } from '../styled/Dashboard.styled'
 
-export default function ReusableWorkoutForm({onInputChange, onFormSubmit, updateDistance, workoutData}) {
+export default function ReusableWorkoutForm({onInputChange, onFormSubmit, workoutData}) {
 
 
 return (
@@ -27,10 +27,9 @@ return (
                             </FormInputFlex>
                             {workoutData.category_id == "2" || workoutData.category_id == "3" ? (
                             <FormInputFlex jc='space-between'>
-                                <h3>Distance</h3>
+                                <h3>Distance (km)</h3>
                                 <Flex fd="column" style={{minWidth: "20%", marginRight: "5%"}}>
-                                    <input type="number" id="kilometres" name="kilometres" min="0" max="1000" placeholder="0 KM" onChange={updateDistance} required />
-                                    <input type="number" id="metres" name="metres" min="1" max="999" placeholder="0 M" onChange={updateDistance} required />
+                                    <input type="number" id="distance" name="distance" min="0" max="1000" placeholder="0.000 KM" step="0.001" onChange={onInputChange}  defaultValue={workoutData.distance}  required />
                                 </Flex>
                             </FormInputFlex>
                             ) : null 

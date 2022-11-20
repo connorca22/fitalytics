@@ -2,13 +2,11 @@ import fitalyticsAPI from '../config/api'
 
 export async function getWorkouts() {
     const response = await fitalyticsAPI.get('/api/workouts')
-    console.log(response.data)
     return response.data
 }
 
 export async function getWorkout(id) {
     const response = await fitalyticsAPI.get(`/api/workouts/${id}`)
-    console.log(response.data)
     return response.data
 }
 

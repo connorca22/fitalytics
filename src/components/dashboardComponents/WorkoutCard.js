@@ -15,7 +15,7 @@ export default function WorkoutCard({workout}) {
                 <div><h4>DATE: </h4><p>{date}</p></div>
                 <div><h4>TYPE: </h4><p>{categories[category_id].name}</p></div>
                 <div><h4>DURATION: </h4><p>{time} minutes</p></div>
-                {category_id === 2 || category_id === 3 ? (<div><h4>DISTANCE: </h4><p>{distance}</p></div>) : null }
+                {category_id === 2 || category_id === 3 ? (<div><h4>DISTANCE: </h4><p>{distance}km</p></div>) : null }
                 {avg_bpm !== '' ? (<div><h4>AVERAGE BPM: </h4><p>{avg_bpm}</p></div>) : null }
                 {description !== '' ? (<div><h4>DESCRIPTION: </h4><p>{description}</p></div>) : null }
             </WorkoutCardFlex>
