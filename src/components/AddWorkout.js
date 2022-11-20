@@ -10,7 +10,7 @@ export default function AddWorkout() {
     const initialState = {
         date: "",
         category_id: "",
-        time: "0:0",
+        time: "",
         description: "",
         distance: "",
         avg_bpm: ""
@@ -25,26 +25,28 @@ export default function AddWorkout() {
         })
     }
 
+    var workoutDist = ['', '']
+    function updateDistance(event) {
+        if (event.target.id === 'kilometres') {workoutDist[0] = event.target.value}
+        if (event.target.id === 'metres') {workoutDist[1] = event.target.value}
+        if(workoutDist[0] !== '' && workoutDist[1] !== '') {
+        setWorkoutData({
+            ...workoutData,
+            distance: `${workoutDist[0]}km ${workoutDist[1]}m`
+        })
+    }
+    }
+
 
     const navigate = useNavigate()
 
     function onFormSubmit(event) {
         event.preventDefault()
-        if (workoutData.category_id === "2" || workoutData.category_id ==="3") {
-            let km = event.target.children[0].children[3].children[1].children[0].value 
-            let metres = event.target.children[0].children[3].children[1].children[1].value 
-            let string = ''  
-            if (km === '') {string += '0.'} else {string += `${km}.`} 
-            if (metres === '') {string += '0km'} else {string += `${metres}km`}
-            setWorkoutData({
-                ...workoutData,
-                distance: string
-            })
-        }
         createWorkout(workoutData)
         .then(() => {
             navigate('/dashboard')
         })
+        console.log(workoutData)
     }
 
 
@@ -78,8 +80,8 @@ export default function AddWorkout() {
                             <FormInputFlex jc='space-between'>
                                 <h3>Distance</h3>
                                 <Flex fd="column" style={{minWidth: "20%", marginRight: "5%"}}>
-                                    <input type="number" id="kilometres" name="kilometres" min="0" max="1000" placeholder="0 KM" required />
-                                    <input type="number" id="metres" name="metres" min="1" max="999" placeholder="0 M" required />
+                                    <input type="number" id="kilometres" name="kilometres" min="0" max="1000" placeholder="0 KM" onChange={updateDistance} required />
+                                    <input type="number" id="metres" name="metres" min="1" max="999" placeholder="0 M" onChange={updateDistance} required />
                                 </Flex>
                             </FormInputFlex>
                             ) : null 

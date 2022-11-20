@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import { SectionWrapper, Container } from "./styled/Container.styled"
 import WorkoutCard from "./dashboardComponents/WorkoutCard"
 import { getWorkout } from "../services/workoutService"
+import SingleWorkout from "./dashboardComponents/SingleWorkout"
 
 export default function Workout() {
 
@@ -21,7 +22,7 @@ export default function Workout() {
         <SectionWrapper marginTop="60px">
             <Container>
                 { Object.values(workout).length > 0 ? (
-                <WorkoutCard workout={workout} individual={true}/> 
+                <SingleWorkout workout={workout} /> 
                 ) : null }
             </Container>
         </SectionWrapper>
