@@ -17,9 +17,10 @@ export async function createWorkout(data) {
     return response.data
 }
 
-// export async function updateWorkout() {
-
-// }
+export async function updateWorkout(data) {
+    const response = await fitalyticsAPI.put(`/api/workouts/${data.id}`, data)
+    return response.data
+}
 
 export async function deleteWorkout(id) {
     const response = await fitalyticsAPI.delete(`/api/workouts/${id}`)
