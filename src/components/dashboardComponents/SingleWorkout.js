@@ -56,7 +56,7 @@ export default function SingleWorkout({workout}) {
                 {description !== '' ? (<div><h4>DESCRIPTION: </h4><p>{description}</p></div>) : null }
             </WorkoutCardFlex>
                 <WorkoutCardFlex ai="flex-end" style={{height: "100%"}}>
-                    <Link to={`/dashboard/${id}`}><button>Update</button></Link>
+                    <Link to={`/dashboard/update/${id}`}><button>Update</button></Link>
                     <button onClick={deleteHandler}>Delete</button>
                 </WorkoutCardFlex>
         </WorkoutCardFlex>

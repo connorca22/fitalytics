@@ -46,7 +46,6 @@ export default function AddWorkout() {
         .then(() => {
             navigate('/dashboard')
         })
-        console.log(workoutData)
     }
 
 
