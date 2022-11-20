@@ -3,8 +3,7 @@ import { WorkoutForm, FormInputFlex } from '../styled/Dashboard.styled'
 
 export default function ReusableWorkoutForm({onInputChange, onFormSubmit, updateDistance, workoutData}) {
 
-    const test = "" + workoutData.category_id
-    {console.log(test)}
+
 return (
 <WorkoutForm onSubmit={onFormSubmit}>
     <Flex fd="column">
@@ -15,6 +14,7 @@ return (
     <FormInputFlex jc='space-between'> 
         <h3>Type</h3>
         <select id="category_id" name="category_id" onChange={onInputChange} value={String(workoutData.category_id)} required>
+                                <option value="" disabled selected hidden>Select Option</option>
                                 <option value="1">Weights</option>
                                 <option value="2">Swimming</option>
                                 <option value="3">Running</option>
