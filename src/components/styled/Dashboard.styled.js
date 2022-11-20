@@ -44,6 +44,7 @@ export const WorkoutCardFlex= styled.div`
     flex-basis: ${({fb}) => fb};
     align-items: ${({ai}) => ai};
     text-align: ${({ta}) => ta};
+
     
     img {
         padding: 3%;
@@ -59,5 +60,8 @@ export const WorkoutCardFlex= styled.div`
     div {
         margin-top: 1.5%;
     }
+
+
+
 `
 

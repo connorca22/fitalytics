@@ -15,3 +15,9 @@ export async function signIn(data) {
 export async function signOut() {
     localStorage.clear()
 }
+
+export async function getUser(username) {
+    const response = await fitalyticsAPI.get(`/api/users/${username}`)
+    console.log(response.data)
+    return response.data
+}

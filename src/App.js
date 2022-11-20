@@ -8,6 +8,7 @@ import Dashboard from "./components/Dashboard"
 import Error from "./components/Error"
 import ProtectedRoute from "./components/ProtectedRoute";
 import AddWorkout from './components/AddWorkout'
+import Workout from "./components/Workout";
 import {useReducer} from 'react'
 import stateReducer from './utils/stateReducer'
 import {StateContext} from './utils/stateContext'
@@ -38,6 +39,7 @@ function App() {
               <ProtectedRoute>
                 <Routes>
                     <Route index element={<Dashboard/>}></Route>
+                    <Route path="/:workoutId" element={ <Workout />} />
                     <Route path='add-workout' element={<AddWorkout />}></Route>
                     <Route path="*" element={ < Error/>} />
                 </Routes>

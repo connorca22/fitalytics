@@ -1,6 +1,8 @@
 import {useState, useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
 import { SectionWrapper, Flex, Container } from "./styled/Container.styled"
 import { WorkoutForm, FormInputFlex } from './styled/Dashboard.styled'
+import { createWorkout } from '../services/workoutService'
 
 
 export default function AddWorkout() {
@@ -23,24 +25,26 @@ export default function AddWorkout() {
         })
     }
 
+
+    const navigate = useNavigate()
+
     function onFormSubmit(event) {
         event.preventDefault()
         if (workoutData.category_id === "2" || workoutData.category_id ==="3") {
             let km = event.target.children[0].children[3].children[1].children[0].value 
             let metres = event.target.children[0].children[3].children[1].children[1].value 
             let string = ''  
-            if (km !== '') {string += `${km} kilometres. `} 
-            if (metres !== '') {string += `${metres} metres.` }
+            if (km === '') {string += '0.'} else {string += `${km}.`} 
+            if (metres === '') {string += '0km'} else {string += `${metres}km`}
             setWorkoutData({
                 ...workoutData,
                 distance: string
             })
         }
-        console.log(workoutData)
-        // createWorkout(workoutData)
-        // .then(() => {
-        //     navigate('')
-        // })
+        createWorkout(workoutData)
+        .then(() => {
+            navigate('/dashboard')
+        })
     }
 
 

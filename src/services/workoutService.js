@@ -6,18 +6,22 @@ export async function getWorkouts() {
     return response.data
 }
 
-// export async function getWorkout() {
+export async function getWorkout(id) {
+    const response = await fitalyticsAPI.get(`/api/workouts/${id}`)
+    console.log(response.data)
+    return response.data
+}
 
-// }
-
-// export async function createWorkout() {
-
-// }
+export async function createWorkout(data) {
+    const response = await fitalyticsAPI.post('/api/workouts', data)
+    return response.data
+}
 
 // export async function updateWorkout() {
 
 // }
 
-// export async function deleteWorkout() {
-
-// }
+export async function deleteWorkout(id) {
+    const response = await fitalyticsAPI.delete(`/api/workouts/${id}`)
+    return response.data
+}
