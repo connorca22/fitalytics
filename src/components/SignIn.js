@@ -33,6 +33,15 @@ export default function SignIn() {
             dispatch({type: 'setToken', data: token})
             navigate('/dashboard')
         })
+        .catch((err) => {
+            let errorMessage = ''
+            let singleError = err.response.data.error ? true : false
+            if (singleError) {window.alert(err.response.data.error)}
+            else { 
+                err.response.data.errors.map((str) => {errorMessage += `${str}. `}) 
+                window.alert(errorMessage)
+            }
+        })
     }
 
     return (
