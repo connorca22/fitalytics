@@ -31,7 +31,7 @@ function App() {
       <Router>
           <GlobalStyles />
         <Routes>
-          <Route path='/' element={<SharedLayout />}>
+          <Route path='/*' element={<SharedLayout />}>
             <Route index element={<Home />}></Route>
             <Route path='sign-up' element={< SignUp />} />
             <Route path='sign-in' element={< SignIn />} /> 
