@@ -1,4 +1,4 @@
-import { SectionWrapper, Flex, Container } from "../styled/Container.styled"
+import { Flex } from "../styled/Container.styled"
 import { WorkoutForm, FormInputFlex } from '../styled/Dashboard.styled'
 
 export default function ReusableWorkoutForm({onInputChange, onFormSubmit, workoutData}) {
@@ -25,7 +25,7 @@ return (
                                 <h3>Duration</h3>
                                 <input type="number" id="time" name="time" min="0" max="1440" placeholder="(Minutes)" onChange={onInputChange}  defaultValue={workoutData.time}  required />
                             </FormInputFlex>
-                            {workoutData.category_id == "2" || workoutData.category_id == "3" ? (
+                            {workoutData.category_id === "2" || workoutData.category_id === "3" || workoutData.category_id === 2 || workoutData.category_id === 3 ? (
                             <FormInputFlex jc='space-between'>
                                 <h3>Distance (km)</h3>
                                 <Flex fd="column" style={{minWidth: "20%", marginRight: "5%"}}>
