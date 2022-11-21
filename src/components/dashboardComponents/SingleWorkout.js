@@ -46,7 +46,7 @@ export default function SingleWorkout({workout}) {
     } else if (showWorkout.show) {
         return (
             <WorkoutCardFlex ai="center" border="1px solid black">
-            <img src={categories[category_id].src} />
+            <img src={categories[category_id].src} alt={'Type of workout'} />
             <WorkoutCardFlex fd='column' fb="50%" ta='left'>
                 <div><h4>DATE: </h4><p>{date}</p></div>
                 <div><h4>TYPE: </h4><p>{categories[category_id].name}</p></div>
