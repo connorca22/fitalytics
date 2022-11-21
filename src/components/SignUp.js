@@ -44,7 +44,7 @@ export default function SignUp() {
                     <h1>Sign Up</h1>
                     <AuthForm onSubmit={onFormSubmit}>
                         <input type="text" name="name" id="name" value={userDetails.name} onChange={onInputChange} placeholder="Name" required></input>
-                        <input type="text" name="username" id="username" value={userDetails.username} onChange={onInputChange} placeholder="Username" pattern="[A-Za-z0-9]" title="Numbers & letters only. 3-20 characters" required></input>
+                        <input type="text" name="username" id="username" value={userDetails.username} onChange={onInputChange} placeholder="Username" pattern="[A-Za-z0-9]{3-20}" title="Numbers & letters only. 3-20 characters" required></input>
                         <input type="email" name="email" id="email" value={userDetails.email} onChange={onInputChange} placeholder="Email" required></input>
                         <input type="password" name="password" id="password" value={userDetails.password} onChange={onInputChange} placeholder="Password" required></input>
                         <input type="password" name="password_confirmation" id="password_confirmation" value={userDetails.password_confirmation} onChange={onInputChange} placeholder="Confirm Password" required></input>                
