@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 const fitalyticsAPI = axios.create({
-    baseURL: 'https://fitalytics-api.herokuapp.com'
+    baseURL: 'http://localhost:3000'
 })
 
-//http://localhost:3000 
+// https://fitalytics-api.herokuapp.com
 
 fitalyticsAPI.interceptors.request.use((req) => {
     const token = localStorage.getItem('token');

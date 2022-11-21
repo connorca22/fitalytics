@@ -38,7 +38,6 @@ export default function SignUp() {
         .catch((err) => {
             let errorMessage = ''
             let singleError = err.response.data.error ? true : false
-            console.log(err)
             if (singleError) {window.alert(err.response.data.error)}
             else { 
                 err.response.data.errors.map((str) => {errorMessage += `${str}. `}) 
