@@ -4,7 +4,12 @@ import { signOut } from "../../services/authServices";
 import { useGlobalState } from "../../utils/stateContext";
 
 export default function HomeNav() {
-    const loggedIn = useLocation().pathname.includes('dashboard')
+    //constant that check whether the user is in the portal or not. 
+    const insidePortal = useLocation().pathname.includes('dashboard')
+    //constant that checks if user is loggedIn. Will use these to adjust nav based on whether 
+    //user is on the homepage or portal, and whether they are logged in. 
+    const loggedInHome = localStorage.username !== undefined;
+
     const {dispatch} = useGlobalState(); 
     const navigate = useNavigate();
 
@@ -18,7 +23,7 @@ export default function HomeNav() {
     return (
         <Nav>
             <NavContainer>
-                {loggedIn ? (
+                {insidePortal ? (
                 <> 
                     <NavLink to='/dashboard' style={{textDecoration: "none"}}>FITALYTICS</NavLink>
                     <NavUl>
@@ -34,8 +39,18 @@ export default function HomeNav() {
                 <NavUl>
                     <NavLi><NavLink to='/' style={{textDecoration: "none"}}>About</NavLink></NavLi>
                     <NavLi><NavLink to='/' style={{textDecoration: "none"}}>Contact</NavLink></NavLi>
-                    <NavLi><NavLink to='/sign-in' style={{textDecoration: "none"}}>Sign In</NavLink></NavLi>
-                    <NavLi><NavLink to='/sign-up' style={{textDecoration: "none"}}>Sign Up</NavLink></NavLi>
+                    { loggedInHome ? (
+                        <>
+                            <NavLi><NavLink to='/dashboard' style={{textDecoration: "none"}}>Dashboard</NavLink></NavLi>
+                            <NavLi><NavLink to='/' style={{textDecoration: "none"}} onClick={logOut}>Sign Out</NavLink></NavLi>
+                        </>
+                    ) : (
+                        <>
+                            <NavLi><NavLink to='/sign-in' style={{textDecoration: "none"}}>Sign In</NavLink></NavLi>
+                            <NavLi><NavLink to='/sign-up' style={{textDecoration: "none"}}>Sign Up</NavLink></NavLi>
+                        </>
+                    )
+                    }
                 </NavUl>
                 </>
                 )}
