@@ -26,17 +26,6 @@ const UpdateWorkout = () => {
         })
     }
 
-    function updateDistance(event) {
-        if (event.target.id === 'kilometres') {workoutData.workoutDist[0] = event.target.value}
-        if (event.target.id === 'metres') {workoutData.workoutDist[1] = event.target.value}
-        if(workoutData.workoutDist[0] !== '' && workoutData.workoutDist[1] !== '') {
-        setWorkoutData({
-            ...workoutData,
-            distance: `${workoutData.workoutDist[0]}km ${workoutData.workoutDist[1]}m`
-        })
-    }
-    }
-
 
     const navigate = useNavigate()
 
@@ -54,7 +43,7 @@ const UpdateWorkout = () => {
         <Container>
             <Flex fd="column" border="1px solid black" margin="0px 15%">
                 <h1 style={{paddingTop: "15px"}}>Add Workout</h1>
-                <ReusableWorkoutForm workoutData={workoutData} onInputChange={onInputChange} onFormSubmit={onFormSubmit} updateDistance={updateDistance}/>
+                <ReusableWorkoutForm workoutData={workoutData} onInputChange={onInputChange} onFormSubmit={onFormSubmit} />
             </Flex>
         </Container>
     </SectionWrapper>
