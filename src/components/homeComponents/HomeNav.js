@@ -24,7 +24,7 @@ export default function HomeNav() {
                     <NavUl>
                         <NavLi><NavLink to='/dashboard' style={{textDecoration: "none"}}>Goal</NavLink></NavLi>
                         <NavLi><NavLink to='/dashboard' style={{textDecoration: "none"}}>Trophies</NavLink></NavLi>
-                        <NavLi><NavLink to='/dashboard' style={{textDecoration: "none"}}>Ladder</NavLink></NavLi>
+                        <NavLi><NavLink to='/dashboard/ladder' style={{textDecoration: "none"}}>Ladder</NavLink></NavLi>
                         <NavLi><NavLink to='/' style={{textDecoration: "none"}} onClick={logOut}>Sign Out</NavLink></NavLi>
                     </NavUl>
                 </>                   

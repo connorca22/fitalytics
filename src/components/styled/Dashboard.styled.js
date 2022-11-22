@@ -70,9 +70,11 @@ export const LadderCard = styled.div`
     align-items: ${({ai}) => ai};
     align-content: ${({ac}) => ac};
     margin-bottom: ${({mb}) => mb};
-    border: ${({border}) => border};
+    border: 1px solid black;
     padding: 1%;
+    margin: 0 2% 1% 2%;
 
+    
     h2 {
         border: 1px solid black;
         padding: 1%;
