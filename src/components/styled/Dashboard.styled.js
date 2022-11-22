@@ -60,8 +60,46 @@ export const WorkoutCardFlex= styled.div`
     div {
         margin-top: 1.5%;
     }
+`
 
+export const LadderCard = styled.div`
+    display: flex; 
+    text-align: center;
+    flex-direction: ${({fd}) => fd};
+    justify-content: ${({jc}) => jc};
+    align-items: ${({ai}) => ai};
+    align-content: ${({ac}) => ac};
+    margin-bottom: ${({mb}) => mb};
+    border: ${({border}) => border};
+    padding: 1%;
 
+    h2 {
+        border: 1px solid black;
+        padding: 1%;
+        flex-basis: 5%;
+    }
+    h3 {
 
+    }
+
+    div {
+        flex-basis: 30%;
+    }
+`
+
+export const LadderCardContent = styled.div`
+    display: flex; 
+    text-align: center;
+    flex-direction: ${({fd}) => fd};
+    justify-content: ${({jc}) => jc};
+    align-items: ${({ai}) => ai};
+    align-content: ${({ac}) => ac};
+    margin: ${({margin}) => margin};
+    border: ${({border}) => border};
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 635px) {
+        justify-content: center;
+    }
 `
 
