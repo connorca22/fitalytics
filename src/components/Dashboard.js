@@ -22,14 +22,18 @@ export default function Dashboard() {
     return (
         <SectionWrapper style={{marginTop: "60px"}}>
             <Container>
-                <Flex fd="column">
-                <Flex jc='space-around' ai='center'> 
+                <Flex jc='space-around' ai='center' margin="2% 0" border="1px solid black"> 
+                    <h2>5/7 Workouts This Week</h2>
+                    <Link to="/dashboard/add-workout"><button>Update Goal</button></Link>
+                </Flex>
+                <Flex fd="column" border="1px solid black">
+                <Flex jc='space-around' ai='center' margin="2% 0"> 
                     <h1>Your Workouts</h1>
                     <Link to="/dashboard/add-workout"><button style={{padding: "10px"}}>ADD WORKOUT</button></Link>
                 </Flex>
                     {workouts.map((workout, index) => {
                         return (
-                        <WorkoutCard workout={workout} key={index} individual={false}/>
+                        <WorkoutCard workout={workout} key={index} individual={false} />
                         )
                     }).reverse()} {/* note this is where I reverse order of cards, will need to make this sort by date */}
                 </Flex>

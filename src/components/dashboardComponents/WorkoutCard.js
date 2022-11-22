@@ -9,7 +9,7 @@ export default function WorkoutCard({workout}) {
 
 
         return (
-            <WorkoutCardFlex ai="center" border="1px solid black">
+            <WorkoutCardFlex ai="center" border="1px solid black" margin="1.5% 3%">
             <img src={categories[category_id].src} />
             <WorkoutCardFlex fd='column' fb="50%" ta='left'>
                 <div><h4>DATE: </h4><p>{date}</p></div>
