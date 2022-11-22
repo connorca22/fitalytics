@@ -9,8 +9,6 @@ export default function HomeNav() {
             <NavContainer>
                 <NavLink to='/' style={{textDecoration: "none"}}>Fitalytics</NavLink>
                 <NavUl>
-                    <NavLi><NavLink to='/' style={{textDecoration: "none"}}>About</NavLink></NavLi>
-                    <NavLi><NavLink to='/' style={{textDecoration: "none"}}>Contact</NavLink></NavLi>
                     <NavLi><NavLink to='/' style={{textDecoration: "none"}}>Sign In</NavLink></NavLi>
                     <NavLi><NavLink to='/' style={{textDecoration: "none"}}>Sign Up</NavLink></NavLi>
                 </NavUl>

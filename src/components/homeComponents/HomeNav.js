@@ -27,18 +27,14 @@ export default function HomeNav() {
                 <> 
                     <NavLink to='/dashboard' style={{textDecoration: "none"}}>FITALYTICS</NavLink>
                     <NavUl>
-                        <NavLi><NavLink to='/dashboard' style={{textDecoration: "none"}}>Goal</NavLink></NavLi>
-                        <NavLi><NavLink to='/dashboard' style={{textDecoration: "none"}}>Trophies</NavLink></NavLi>
                         <NavLi><NavLink to='/dashboard/ladder' style={{textDecoration: "none"}}>Ladder</NavLink></NavLi>
                         <NavLi><NavLink to='/' style={{textDecoration: "none"}} onClick={logOut}>Sign Out</NavLink></NavLi>
                     </NavUl>
                 </>                   
                 ) : (
                 <>
-                <NavLink to='/' style={{textDecoration: "none"}}>Fitalytics 2022</NavLink>
+                <NavLink to='/' style={{textDecoration: "none"}}>FITALYTICS</NavLink>
                 <NavUl>
-                    <NavLi><NavLink to='/' style={{textDecoration: "none"}}>About</NavLink></NavLi>
-                    <NavLi><NavLink to='/' style={{textDecoration: "none"}}>Contact</NavLink></NavLi>
                     { loggedInHome ? (
                         <>
                             <NavLi><NavLink to='/dashboard' style={{textDecoration: "none"}}>Dashboard</NavLink></NavLi>
