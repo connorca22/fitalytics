@@ -11,6 +11,7 @@ import AddWorkout from './components/AddWorkout'
 import Workout from "./components/Workout";
 import UpdateWorkout from "./components/UpdateWorkout";
 import Ladder from "./components/Ladder";
+import UpdateGoal from "./components/UpdateGoal";
 import {useReducer} from 'react'
 import stateReducer from './utils/stateReducer'
 import {StateContext} from './utils/stateContext'
@@ -45,6 +46,7 @@ function App() {
                     <Route path="/update/:workoutId" element={ <UpdateWorkout />} />
                     <Route path='add-workout' element={<AddWorkout />}></Route>
                     <Route path='ladder' element={<Ladder />}></Route>
+                    <Route path='update-goal' element={<UpdateGoal />}></Route>
                     <Route path="*" element={ < Error/>} />
                 </Routes>
               </ProtectedRoute>

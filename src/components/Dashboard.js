@@ -22,14 +22,14 @@ export default function Dashboard() {
     return (
         <SectionWrapper style={{marginTop: "60px"}}>
             <Container>
-                <Flex jc='space-around' ai='center' margin="2% 0" border="1px solid black"> 
+                <Flex jc='space-around' ai='center' margin="2% 0" border="1px solid black" padding="2% 0"> 
                     <h2>5/7 Workouts This Week</h2>
-                    <Link to="/dashboard/add-workout"><button>Update Goal</button></Link>
+                    <Link to="/dashboard/update-goal"><button>Update Goal</button></Link>
                 </Flex>
                 <Flex fd="column" border="1px solid black">
                 <Flex jc='space-around' ai='center' margin="2% 0"> 
                     <h1>Your Workouts</h1>
-                    <Link to="/dashboard/add-workout"><button style={{padding: "10px"}}>ADD WORKOUT</button></Link>
+                    <Link to="/dashboard/add-workout"><button>ADD WORKOUT</button></Link>
                 </Flex>
                     {workouts.map((workout, index) => {
                         return (
