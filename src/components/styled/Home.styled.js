@@ -36,8 +36,32 @@ export const HeaderContainer = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    min-height: 400px;
+    min-height: 350px;
     justify-content: space-around;
+
+    div {
+        width: 70%;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+    }
+`
+
+export const FeatureContainer = styled.div`
+    display: flex; 
+    text-align: center;
+    flex-wrap:wrap;
+    flex-direction: ${({fd}) => fd};
+    justify-content: ${({jc}) => jc};
+    align-items: ${({ai}) => ai};
+    align-content: ${({ac}) => ac};
+    margin: ${({margin}) => margin};
+    border: ${({border}) => border};
+    padding: ${({padding}) => padding};
+    height: ${({height}) => height};
+
 `
 
 export const FeatureCard = styled.div`
@@ -48,14 +72,30 @@ export const FeatureCard = styled.div`
     margin: 10px;
     border-radius: 3px;
     background-color: ${({bg}) => bg};
+    width: 22%;
+    max-height: 254px;
+
+    @media screen and (min-width: 490px) and (max-width: 890px) {
+        width: 45%;
+        max-height: 300px;
+    }
+
+    @media screen and (max-width: 489px) {
+        width: 90%;
+        max-height: 500px;
+    }
 
     h4 {
         font-size: 1.4em;
-        padding-top: 15px;
+        padding: 10px 0 5px 0;
     }
 
     p {
         margin: 0px 25px 15px 25px;
+
+        @media screen and (min-width: 450px) and (max-width: 749px) {
+            margin: 0px 5px 15px 5px
+        }
     }
 
     img {
