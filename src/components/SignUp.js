@@ -49,7 +49,7 @@ export default function SignUp() {
             if (singleError) {window.alert(err.response.data.error)}
             else { 
                 err.response.data.errors.map((str) => {errorMessage += `${str}. `}) 
-                window.alert(errorMessage)
+                alert(errorMessage)
             }
         })
     }

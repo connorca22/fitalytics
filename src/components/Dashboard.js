@@ -41,7 +41,7 @@ export default function Dashboard() {
 
     return (
     
-            <SectionWrapper style={{marginTop: "60px"}} height="100%" bg='#A8BBB0'>
+            <SectionWrapper style={{marginTop: "60px"}} height="100%" >
                 <Container>
                 {weeklyGoal.weekly_goal === 0 ? (
                     <Flex jc='space-around' ai='center' margin="2% 0" border="1px solid black" padding="2% 0" bg="#EBE8E0"> 

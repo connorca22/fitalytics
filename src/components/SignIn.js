@@ -48,7 +48,7 @@ export default function SignIn() {
             if (singleError) {window.alert(err.response.data.error)}
             else { 
                 err.response.data.errors.map((str) => {errorMessage += `${str}. `}) 
-                window.alert(errorMessage)
+                alert(errorMessage)
             }
         })
     }

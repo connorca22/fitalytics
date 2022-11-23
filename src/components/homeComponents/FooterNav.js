@@ -24,9 +24,9 @@ export default function HomeNav() {
 
     //If logged in will display Dashboard & Signout buttons. Otherwise SignIn & SignUp. 
     return (
-        <footer style={{width: "100%", backgroundColor: "#0A0A00"}}>
+        <footer style={{ width: "100%", backgroundColor: "#0A0A00"}}>
             <NavContainer>
-                <NavLink to='/' style={{textDecoration: "none", color: "#D01110"}}>FITALYTICS 2022</NavLink>
+                <NavLink to='/' style={{textDecoration: "none", color: "#D01110"}}>FITALYTICS</NavLink>
                 <NavUl>
                 { loggedInHome ? (
                         <>

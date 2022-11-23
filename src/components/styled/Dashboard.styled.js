@@ -53,8 +53,8 @@ export const WorkoutCardContainer= styled.div`
     
     img {
         padding: 3%;
-        flex-basis: 30%;
         max-width: 30%;
+        max-height: 100%;
 
         @media screen and (max-width: 520px) {
             max-width: 70%;
