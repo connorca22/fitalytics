@@ -22,7 +22,7 @@ export default function Workout() {
 
     //if user has created any previous workouts, it will load them in using logic contained in SingleWorkout component.
     return (
-        <SectionWrapper marginTop="60px">
+        <SectionWrapper marginTop="60px" bg="#A8BBB0" height="100%">
             <Container>
                 { Object.values(workout).length > 0 ? (
                 <SingleWorkout workout={workout} /> 

@@ -30,25 +30,25 @@ export default function HomeNav() {
             <NavContainer>
                 {insidePortal ? (
                 <> 
-                    <NavLink to='/dashboard' style={{textDecoration: "none"}}>FITALYTICS</NavLink>
+                    <NavLink to='/dashboard' style={{textDecoration: "none", color: "#D01110"}}>FITALYTICS</NavLink>
                     <NavUl>
-                        <NavLi><NavLink to='/dashboard/ladder' style={{textDecoration: "none"}}>Ladder</NavLink></NavLi>
-                        <NavLi><NavLink to='/' style={{textDecoration: "none"}} onClick={logOut}>Sign Out</NavLink></NavLi>
+                        <NavLi><NavLink to='/dashboard/ladder' style={{textDecoration: "none", color: "#D01110"}}>Ladder</NavLink></NavLi>
+                        <NavLi><NavLink to='/' style={{textDecoration: "none", color: "#D01110"}} onClick={logOut}>Sign Out</NavLink></NavLi>
                     </NavUl>
                 </>                   
                 ) : (
                 <>
-                <NavLink to='/' style={{textDecoration: "none"}}>FITALYTICS</NavLink>
+                <NavLink to='/' style={{textDecoration: "none", color: "#D01110"}}>FITALYTICS</NavLink>
                 <NavUl>
                     { loggedInHome ? (
                         <>
-                            <NavLi><NavLink to='/dashboard' style={{textDecoration: "none"}}>Dashboard</NavLink></NavLi>
-                            <NavLi><NavLink to='/' style={{textDecoration: "none"}} onClick={logOut}>Logout</NavLink></NavLi>
+                            <NavLi><NavLink to='/dashboard' style={{textDecoration: "none", color: "#D01110"}}>Dashboard</NavLink></NavLi>
+                            <NavLi><NavLink to='/' style={{textDecoration: "none", color: "#D01110"}} onClick={logOut}>Logout</NavLink></NavLi>
                         </>
                     ) : (
                         <>
-                            <NavLi><NavLink to='/sign-in' style={{textDecoration: "none"}}>Sign In</NavLink></NavLi>
-                            <NavLi><NavLink to='/sign-up' style={{textDecoration: "none"}}>Sign Up</NavLink></NavLi>
+                            <NavLi><NavLink to='/sign-in' style={{textDecoration: "none", color: "#D01110"}}>Sign In</NavLink></NavLi>
+                            <NavLi><NavLink to='/sign-up' style={{textDecoration: "none", color: "#D01110"}}>Sign Up</NavLink></NavLi>
                         </>
                     )
                     }

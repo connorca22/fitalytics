@@ -48,6 +48,7 @@ export const WorkoutCardContainer= styled.div`
     align-items: ${({ai}) => ai};
     text-align: ${({ta}) => ta};
     margin: ${({margin}) => margin};
+    background-color: #EBE8E0;
 
     
     img {
@@ -115,7 +116,7 @@ export const LadderCard = styled.div`
     margin-bottom: ${({mb}) => mb};
     border: 1px solid black;
     padding: 1%;
-    margin: 0 2% 1% 2%;
+    margin: 0 2% 2% 2%;
 
     
     h2 {
@@ -130,6 +131,12 @@ export const LadderCard = styled.div`
     div {
         flex-basis: 30%;
     }
+
+    @media screen and (max-width: 500px) {
+        margin-bottom: 4%;
+
+    }
+
 `
 
 export const LadderCardContent = styled.div`

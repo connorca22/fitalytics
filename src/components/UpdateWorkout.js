@@ -42,9 +42,9 @@ const UpdateWorkout = () => {
 
     //Uses reusable workout form component - we pass in workoutData so that it can pre populate the form values with existing workout data. 
     return (
-        <SectionWrapper marginTop="60px">
+        <SectionWrapper marginTop="60px" height="100%" bg="#A8BBB0">
         <Container>
-            <Flex fd="column" border="1px solid black" margin="0px 15%" m="0">
+            <Flex fd="column" border="1px solid black" margin="0px 15%" m="0" bg="white">
                 <h1 style={{paddingTop: "15px"}}>Update Workout</h1>
                 <ReusableWorkoutForm workoutData={workoutData} onInputChange={onInputChange} onFormSubmit={onFormSubmit} />
             </Flex>

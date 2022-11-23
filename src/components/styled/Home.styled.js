@@ -6,7 +6,7 @@ width: 100%;
 top: 0;
 border-bottom: 1px solid black;
 z-index: 1;
-background-color: grey;
+background-color: black;
 `
 
 export const NavContainer = styled.div`
@@ -38,6 +38,7 @@ export const HeaderContainer = styled.div`
     text-align: center;
     min-height: 350px;
     justify-content: space-around;
+    background-color: ${({bg}) => bg};
 
     div {
         width: 70%;
@@ -65,6 +66,7 @@ export const FeatureContainer = styled.div`
     border: ${({border}) => border};
     padding: ${({padding}) => padding};
     height: ${({height}) => height};
+    padding-bottom: 5%;
 
 `
 

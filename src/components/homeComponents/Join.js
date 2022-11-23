@@ -8,7 +8,7 @@ import { Btn } from "../styled/Home.styled"
 export default function Join() {
 
     return (
-        <SectionWrapper>
+        <SectionWrapper bg="#A8BBB0">
             <Container>
                 <Flex fd="column" ai="center" jc="space-around">
                     <h1 style={{marginBottom: "20px", marginTop: "10px"}}>JOIN TODAY</h1>

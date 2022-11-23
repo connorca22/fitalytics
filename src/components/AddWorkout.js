@@ -45,9 +45,9 @@ export default function AddWorkout() {
 
 
     return (
-        <SectionWrapper marginTop="60px">
+        <SectionWrapper marginTop="60px" height="100%" bg="#A8BBB0">
             <Container>
-                <Flex fd="column" border="1px solid black" margin="0px 15%" m="0">
+                <Flex fd="column" border="1px solid black" margin="0px 15%" m="0" bg="white">
                     <h1 style={{paddingTop: "15px"}}>Add Workout</h1>
                     <ReusableWorkoutForm workoutData={workoutData} onInputChange={onInputChange} onFormSubmit={onFormSubmit} />
                 </Flex>

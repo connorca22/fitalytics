@@ -1,8 +1,14 @@
 import styled from 'styled-components'
 
+export const FullHeightContainer = styled.div`
+    height: 100%;
+    background-color: ${({bg}) => bg};
+`
+
 export const SectionWrapper = styled.div`
     background-color: ${({bg}) => bg};
     margin-top: ${({marginTop}) => marginTop};
+    height: ${({height}) => height};
 `
 
 export const Container = styled.div`
@@ -28,6 +34,7 @@ export const Flex = styled.div`
     border: ${({border}) => border};
     padding: ${({padding}) => padding};
     height: ${({height}) => height};
+    background-color: ${({bg}) => bg};
 
 
 

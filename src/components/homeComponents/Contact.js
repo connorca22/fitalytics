@@ -27,7 +27,7 @@ export default function Contact() {
     }
 
     return (
-        <SectionWrapper>
+        <SectionWrapper bg="#EBE8E0">
             <Container>
                 <Flex fd="column" ai="center" jc="space-around">
                     <h1 style={{marginBottom: "20px", marginTop: "10px"}}>GET IN TOUCH</h1>

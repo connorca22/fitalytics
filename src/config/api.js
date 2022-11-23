@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const fitalyticsAPI = axios.create({
-    baseURL: 'https://fitalytics-api.herokuapp.com'
+    baseURL: 'http://localhost:3000'
 })
 
 //baseURL options...

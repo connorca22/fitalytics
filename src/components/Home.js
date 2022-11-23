@@ -14,7 +14,6 @@ export default function Home() {
             <AppFeatures />
             <Join />
             <Contact />
-            <FooterNav />
         </>
     )
 } 
