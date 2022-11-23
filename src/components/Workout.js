@@ -5,11 +5,14 @@ import WorkoutCard from "./dashboardComponents/WorkoutCard"
 import { getWorkout } from "../services/workoutService"
 import SingleWorkout from "./dashboardComponents/SingleWorkout"
 
+//Page that displays a single workout. 
 export default function Workout() {
 
+    //gets the workout id from params, creates some state to store workout in. 
     const [workout, setWorkout] = useState([])
     const {workoutId} = useParams()
 
+    //calls getWorkout from workoutServices. Then sets that workout into state. 
     useEffect(() => {
         getWorkout(workoutId)
         .then((obj) => {
@@ -17,7 +20,7 @@ export default function Workout() {
         })
     }, [])
 
-    
+    //if user has created any previous workouts, it will load them in using logic contained in SingleWorkout component.
     return (
         <SectionWrapper marginTop="60px">
             <Container>

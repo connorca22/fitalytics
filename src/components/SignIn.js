@@ -5,14 +5,20 @@ import {signIn} from '../services/authServices'
 import { useGlobalState } from '../utils/stateContext'
 import {useNavigate} from 'react-router-dom'
 
+//Signin page. 
+
 export default function SignIn() {
+    
+    //Creates some initial state for userDetails state
     const initialState = {
         email: "",
         password: ""
     }
     
+    //creates some state that we'll store form input values in 
     const [userDetails, setUserDetails] = useState(initialState)
 
+    //change handler for form inputs
     function onInputChange(event) {
         setUserDetails({
             ...userDetails,
@@ -23,6 +29,8 @@ export default function SignIn() {
     const {dispatch} = useGlobalState() 
     const navigate = useNavigate()
 
+    //on form submit, call signIn function from auth services. Then set local storage with the return values. 
+    //Then call reducer to update username and token in global state. Then route to dashboard. 
     function onFormSubmit(event) {
         event.preventDefault()
         signIn(userDetails)
@@ -33,6 +41,7 @@ export default function SignIn() {
             dispatch({type: 'setToken', data: token})
             navigate('/dashboard')
         })
+        //If there's an error logging in, then print that error to a window alert. 
         .catch((err) => {
             let errorMessage = ''
             let singleError = err.response.data.error ? true : false

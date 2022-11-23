@@ -1,3 +1,4 @@
+//workout categories and respective names and image paths. 
 export const categories = {
     1: {
         name: 'Weights',

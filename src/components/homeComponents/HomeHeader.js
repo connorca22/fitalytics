@@ -1,6 +1,8 @@
 import { HeaderContainer } from "../styled/Home.styled"
 import { SectionWrapper, Container } from "../styled/Container.styled"
 
+
+//Header section on the home page. Loaded into Home.js
 export default function HomeHeader() {
     return (
     <SectionWrapper marginTop="60px">

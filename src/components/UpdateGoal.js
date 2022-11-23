@@ -5,13 +5,14 @@ import { setGoal } from "../services/goalServices";
 import { SectionWrapper, Container, Flex } from "./styled/Container.styled";
 import { FormInputFlex } from "./styled/Dashboard.styled";
 
+//Update weekly goal page/form
 const UpdateGoal = () => {
     const initialState = {
         weekly_goal: 0
     }
     const [weeklyGoal, setWeeklyGoal] = useState(initialState)
 
-
+    //form input change handler
     function onInputChange(event) {
         setWeeklyGoal({
             ...weeklyGoal,
@@ -22,6 +23,7 @@ const UpdateGoal = () => {
 
     const navigate = useNavigate()
 
+    //form submit handler. calls setGoal from goalServices. Passes in username and form data. 
     function onFormSubmit(event) {
         event.preventDefault()
         const username = localStorage.username;

@@ -8,6 +8,9 @@ import { categories } from "../../config/categoryData";
 import { WorkoutCardContainer } from "../styled/Dashboard.styled";
 
 
+//Component is used to represent a single workout in a specific workout page (used in Workout component)
+//Workout details are pulled from api call in Workout.js, then passed in as props. 
+
 export default function SingleWorkout({workout}) {
 
     const {category_id, date, avg_bpm, time, distance, description, id, user_id} = workout;
@@ -15,6 +18,7 @@ export default function SingleWorkout({workout}) {
     const initialValue = {show: 'loading'}
     const [showWorkout, setShowWorkout] = useState(initialValue)
 
+//Ensures user can only see their own workouts.
     useEffect(() => {
         getUser(localStorage.username)
         .then((currentUser) => {
@@ -33,11 +37,13 @@ export default function SingleWorkout({workout}) {
 
     const navigate = useNavigate()
 
+    //Delete workout functionality. 
     function deleteHandler() {
         deleteWorkout(id)
         navigate('/dashboard')
     }
 
+    //if workout belongs to user, then load the workout details. 
     if(showWorkout.show === 'loading') {
         return null 
     } else if (!showWorkout.show) {

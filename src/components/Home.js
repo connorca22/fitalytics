@@ -6,6 +6,7 @@ import Join from "./homeComponents/Join"
 import Contact from "./homeComponents/Contact"
 import FooterNav from "./homeComponents/FooterNav"
 
+//Home page. Loads in components from homeComponents directory
 export default function Home() {
     return (
         <>

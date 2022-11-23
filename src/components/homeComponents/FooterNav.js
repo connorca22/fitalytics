@@ -4,13 +4,17 @@ import { useGlobalState } from "../../utils/stateContext";
 import { useNavigate } from "react-router-dom";
 import { signOut } from "../../services/authServices";
 
+//Footer bar used on Homepage. 
+
 export default function HomeNav() {
 
+//Checks if user is logged in. 
     const loggedInHome = localStorage.username !== undefined;
 
     const {dispatch} = useGlobalState(); 
     const navigate = useNavigate();
 
+//Calls logOut functionality in authServices. 
     function logOut() {
         signOut();
         dispatch({type: 'setUsername', data: null})
@@ -18,6 +22,7 @@ export default function HomeNav() {
         navigate("/")
     }
 
+    //If logged in will display Dashboard & Signout buttons. Otherwise SignIn & SignUp. 
     return (
         <footer style={{width: "100%", backgroundColor: "grey"}}>
             <NavContainer>

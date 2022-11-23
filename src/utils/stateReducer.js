@@ -1,4 +1,5 @@
 export default function reducer(state, action) {
+    //reducer that updates the username and token of current logged in user in global state. 
     switch(action.type) {
         case 'setUsername':{
             return {

@@ -20,14 +20,18 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
 
-
+//initial state contains the current user's username and authtoken 
   const initialState = {
     currentUser: localStorage.getItem('username') || null,
     authToken: {token: localStorage.getItem('token') || null}
   }
 
+//sets up our reducer and initial global state. 
   const [store, dispatch] = useReducer(stateReducer, initialState)
 
+//gives all of our routes access to our global state.
+//sets up global styles 
+//Sets up all routes
   return (
     <StateContext.Provider value={{store, dispatch}}>
       <Router>

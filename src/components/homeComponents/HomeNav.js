@@ -3,6 +3,8 @@ import {NavLink, useLocation, useNavigate, Link} from 'react-router-dom'
 import { signOut } from "../../services/authServices";
 import { useGlobalState } from "../../utils/stateContext";
 
+//Navigation bar used throughout application. Loaded into SharedLayout above Outlet
+
 export default function HomeNav() {
     //constant that check whether the user is in the portal or not. 
     const insidePortal = useLocation().pathname.includes('dashboard')
@@ -20,6 +22,9 @@ export default function HomeNav() {
         navigate("/")
     }
     
+    //Home page: If logged in will display Dashboard & Signout buttons. Otherwise SignIn & SignUp. 
+    //Dashboard pages: Displays 'Ladder' and 'Sign Out' buttons
+
     return (
         <Nav>
             <NavContainer>

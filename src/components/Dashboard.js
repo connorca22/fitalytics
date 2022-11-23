@@ -6,9 +6,11 @@ import { getWorkouts } from "../services/workoutService";
 import WorkoutCard from './dashboardComponents/WorkoutCard';
 import { getWeeklyWorkouts } from '../services/goalServices';
 
+//Main page once signed in. 
 
 export default function Dashboard() {
 
+    //Create some state for workouts and our weekly goal data. 
     const [workouts, setWorkouts] = useState([])
     const [weeklyGoal, setWeeklyGoal] = useState(
         {
@@ -17,6 +19,7 @@ export default function Dashboard() {
         }
     )
 
+    //gets weekly goal, workouts this week, and all workouts. Stores them in state. 
     useEffect(() => {
         const username= localStorage.username
         getWeeklyWorkouts(username)

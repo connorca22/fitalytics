@@ -3,10 +3,14 @@ import { SectionWrapper, Container, Flex } from "./styled/Container.styled"
 import { LadderCard, LadderCardContent } from "./styled/Dashboard.styled"
 import { getOverallLadder } from "../services/ladderServices"
 
+//All time workouts ladder page 
 export default function Ladder() {
 
-    const [ladder, setLadder] = useState([])
+    //create some state we'll store our ladder in. 
 
+    const [ladder, setLadder] = useState([])
+    
+    //get's the rankings using ladderServices method. Stores in state. 
     useEffect(() => {
         getOverallLadder()
         .then((ladder) => {
@@ -14,6 +18,7 @@ export default function Ladder() {
         })
     }, [])
 
+    //maps through ladder and prints rankings to page.
     return (
         <SectionWrapper style={{marginTop: "60px"}}>
             <Container>

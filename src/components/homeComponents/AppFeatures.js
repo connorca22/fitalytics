@@ -2,6 +2,7 @@ import { Container, Flex, SectionWrapper } from "../styled/Container.styled"
 import Card from "./Card"
 import { FeatureContainer } from "../styled/Home.styled"
 
+//Section that details app functionality on home page. Pulled into Home.js
 
 export default function AppFeatures() {
     return (

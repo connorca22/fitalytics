@@ -1,5 +1,7 @@
 import {FeatureCard} from "../styled/Home.styled"
 
+//Cards that contain image, header, and copy used in AppFeatures component, on home page.
+
 export default function Card(props) {
     return (
     <FeatureCard>

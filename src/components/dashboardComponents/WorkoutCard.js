@@ -3,6 +3,10 @@ import { WorkoutCardFlex, WorkoutCardContainer } from "../styled/Dashboard.style
 import {Link} from 'react-router-dom'
 import { categories } from "../../config/categoryData";
 
+
+//Used in Dashboard to generate a list of all workouts as sequential cards. 
+//Dashboard gets list of workouts from api call, then maps through them generating Workout cards and passing in details as props. 
+
 export default function WorkoutCard({workout}) {
 
     const {category_id, date, avg_bpm, time, distance, description, id} = workout;

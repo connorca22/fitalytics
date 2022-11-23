@@ -2,6 +2,8 @@ import { useState } from "react"
 import { Container, Flex, SectionWrapper } from "../styled/Container.styled"
 import { Form} from "../styled/Home.styled"
 
+//Contact form used in Home.js. Still need to connect to email service to make form functional. 
+
 export default function Contact() {
     
     const initialState = {

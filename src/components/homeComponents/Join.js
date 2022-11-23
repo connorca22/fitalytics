@@ -2,6 +2,9 @@ import { Container, Flex, SectionWrapper } from "../styled/Container.styled"
 import { Link } from "react-router-dom"
 import { Btn } from "../styled/Home.styled"
 
+
+//Join us section on home page linking to Sign up page. Loaded into Home.js
+
 export default function Join() {
 
     return (

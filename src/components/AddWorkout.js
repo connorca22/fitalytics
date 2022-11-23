@@ -5,9 +5,11 @@ import { WorkoutForm, FormInputFlex } from './styled/Dashboard.styled'
 import { createWorkout } from '../services/workoutService'
 import ReusableWorkoutForm from './dashboardComponents/ReusableWorkoutForm'
 
+//Add workout page used in Dashboard 
 
 export default function AddWorkout() {
 
+    //set initial state for useState 
     const initialState = {
         date: "",
         category_id: "",
@@ -17,9 +19,10 @@ export default function AddWorkout() {
         avg_bpm: "",
         workoutDist: ['', '']
     }
+    //create some workoutData state. 
     const [workoutData, setWorkoutData] = useState(initialState)
 
-
+    //form input onChange handler 
     function onInputChange(event) {
         setWorkoutData({
             ...workoutData,
@@ -30,6 +33,7 @@ export default function AddWorkout() {
 
     const navigate = useNavigate()
 
+    //form submit handler. Creates a workout from form data using call from workoutServices 
     function onFormSubmit(event) {
         event.preventDefault()
         createWorkout(workoutData)
