@@ -46,6 +46,10 @@ export const HeaderContainer = styled.div`
         flex-direction: column;
         align-items: center;
         background-color: white;
+
+        @media screen and (max-width: 450px) {
+            width: 90%;
+        }
     }
 `
 
@@ -150,7 +154,7 @@ margin: 30px 15%;
 
 input {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-size: 1.3em;
     border: none;
     border-bottom: 1px solid black;
@@ -158,6 +162,7 @@ input {
 }
 input[type="submit"] {
     border: none;
+    margin-top: 10px;
 }
 ::placeholder { 
     color: black;

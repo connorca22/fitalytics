@@ -38,7 +38,7 @@ export default function HomeNav() {
                     { loggedInHome ? (
                         <>
                             <NavLi><NavLink to='/dashboard' style={{textDecoration: "none"}}>Dashboard</NavLink></NavLi>
-                            <NavLi><NavLink to='/' style={{textDecoration: "none"}} onClick={logOut}>Sign Out</NavLink></NavLi>
+                            <NavLi><NavLink to='/' style={{textDecoration: "none"}} onClick={logOut}>Logout</NavLink></NavLi>
                         </>
                     ) : (
                         <>

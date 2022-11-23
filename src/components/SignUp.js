@@ -50,7 +50,7 @@ export default function SignUp() {
         <SectionWrapper marginTop="60px">
             <Container>
                 <Flex fd="column" border='1px solid black'>
-                    <h1>Sign Up</h1>
+                    <h1 style={{marginTop: "3%"}}>Sign Up</h1>
                     <AuthForm onSubmit={onFormSubmit}>
                         <input type="text" name="name" id="name" value={userDetails.name} onChange={onInputChange} placeholder="Name" required></input>
                         <input type="text" name="username" id="username" value={userDetails.username} onChange={onInputChange} placeholder="Username" pattern="[A-Za-z0-9]{3,20}" title="Numbers & letters only. 3-20 characters" required></input>
