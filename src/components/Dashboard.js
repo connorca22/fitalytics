@@ -45,7 +45,7 @@ export default function Dashboard() {
                 </Flex>
             ) : (                
                 <Flex jc='space-around' ai='center' margin="2% 0" border="1px solid black" padding="2% 0"> 
-                    <h2>{weeklyGoal.workouts_this_week}/{weeklyGoal.weekly_goal} Workouts This Week {weeklyGoal.workouts_this_week >= weeklyGoal.weekly_goal ? '✅' : null}</h2>
+                    <h2>{weeklyGoal.workouts_this_week > weeklyGoal.weekly_goal ? weeklyGoal.weekly_goal : weeklyGoal.workouts_this_week}/{weeklyGoal.weekly_goal} Workouts This Week {weeklyGoal.workouts_this_week >= weeklyGoal.weekly_goal ? '✅' : null}</h2>
                     <Link to="/dashboard/update-goal"><button>UPDATE GOAL</button></Link>
                 </Flex>
             )
