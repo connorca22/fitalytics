@@ -41,7 +41,7 @@ export default function Dashboard() {
             {weeklyGoal.weekly_goal === 0 ? (
                 <Flex jc='space-around' ai='center' margin="2% 0" border="1px solid black" padding="2% 0"> 
                     <h2>Set Weekly Workout Goal</h2>
-                    <Link to="/dashboard/update-goal"><button>CREATE GOAL</button></Link>
+                    <Link to="/dashboard/update-goal"><button>CREATE</button></Link>
                 </Flex>
             ) : (                
                 <Flex jc='space-around' ai='center' margin="2% 0" border="1px solid black" padding="2% 0"> 

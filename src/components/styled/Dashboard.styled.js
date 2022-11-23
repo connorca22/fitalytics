@@ -4,6 +4,7 @@ export const FormInputFlex= styled.div`
     display: flex;
     border: 1px solid black;
     justify-content: ${({jc}) => jc};
+    flex-direction: ${({fd}) => fd};
     margin: 10px 20px;
     padding: 3px;
     align-items: center;
@@ -36,7 +37,9 @@ export const WorkoutForm = styled.form`
 
 `
 
-export const WorkoutCardFlex= styled.div`
+
+
+export const WorkoutCardContainer= styled.div`
     display: flex;
     flex-direction: ${({fd}) => fd};
     border: ${({border}) => border};
@@ -51,7 +54,45 @@ export const WorkoutCardFlex= styled.div`
         padding: 3%;
         flex-basis: 30%;
         max-width: 30%;
+
+        @media screen and (max-width: 520px) {
+            max-width: 70%;
+        }
     }
+
+    @media screen and (max-width: 520px) {
+        flex-direction: column
+    }
+
+    button {
+        padding: 7px 17px;
+        margin-top: 5%;
+        margin-right: 15px;
+        align-self: center;
+
+        @media screen and (max-width: 520px) {
+            margin: 10px;
+        }
+    }
+
+`
+
+export const WorkoutCardFlex= styled.div`
+    display: flex;
+    flex-direction: ${({fd}) => fd};
+    border: ${({border}) => border};
+    justify-content: ${({jc}) => jc};
+    flex-basis: ${({fb}) => fb};
+    align-items: ${({ai}) => ai};
+    text-align: ${({ta}) => ta};
+    margin: ${({margin}) => margin};
+
+
+    @media screen and (max-width: 520px) {
+        width: 80%;
+        align-items: center;
+    }
+
     h4 {
         display: inline;
     }
@@ -61,6 +102,7 @@ export const WorkoutCardFlex= styled.div`
     div {
         margin-top: 1.5%;
     }
+
 `
 
 export const LadderCard = styled.div`
@@ -105,4 +147,3 @@ export const LadderCardContent = styled.div`
         justify-content: center;
     }
 `
-

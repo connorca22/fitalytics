@@ -41,8 +41,8 @@ const UpdateWorkout = () => {
     return (
         <SectionWrapper marginTop="60px">
         <Container>
-            <Flex fd="column" border="1px solid black" margin="0px 15%">
-                <h1 style={{paddingTop: "15px"}}>Add Workout</h1>
+            <Flex fd="column" border="1px solid black" margin="0px 15%" m="0">
+                <h1 style={{paddingTop: "15px"}}>Update Workout</h1>
                 <ReusableWorkoutForm workoutData={workoutData} onInputChange={onInputChange} onFormSubmit={onFormSubmit} />
             </Flex>
         </Container>

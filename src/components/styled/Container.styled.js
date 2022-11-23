@@ -29,7 +29,10 @@ export const Flex = styled.div`
     padding: ${({padding}) => padding};
     height: ${({height}) => height};
 
+
+
     @media screen and (max-width: 600px) {
         flex-direction: column;
+        margin: ${({m}) => m};
     }
 `

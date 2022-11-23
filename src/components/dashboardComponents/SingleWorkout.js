@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import { getUser } from "../../services/authServices";
 import { deleteWorkout } from "../../services/workoutService";
 import { categories } from "../../config/categoryData";
+import { WorkoutCardContainer } from "../styled/Dashboard.styled";
 
 
 export default function SingleWorkout({workout}) {
@@ -45,7 +46,7 @@ export default function SingleWorkout({workout}) {
         )
     } else if (showWorkout.show) {
         return (
-            <WorkoutCardFlex ai="center" border="1px solid black">
+            <WorkoutCardContainer ai="center" border="1px solid black">
             <img src={categories[category_id].src} alt={'Type of workout'} />
             <WorkoutCardFlex fd='column' fb="50%" ta='left'>
                 <div><h4>DATE: </h4><p>{date}</p></div>
@@ -55,11 +56,11 @@ export default function SingleWorkout({workout}) {
                 {avg_bpm !== '' ? (<div><h4>AVERAGE BPM: </h4><p>{avg_bpm}</p></div>) : null }
                 {description !== '' ? (<div><h4>DESCRIPTION: </h4><p>{description}</p></div>) : null }
             </WorkoutCardFlex>
-                <WorkoutCardFlex ai="flex-end" style={{height: "100%"}}>
-                    <Link to={`/dashboard/update/${id}`}><button>Update</button></Link>
-                    <button onClick={deleteHandler}>Delete</button>
+                <WorkoutCardFlex fd="column" ai="flex-end" jc='center' style={{height: "100%"}}>
+                    <Link to={`/dashboard/update/${id}`}><button>UPDATE</button></Link>
+                    <button onClick={deleteHandler}>DELETE</button>
                 </WorkoutCardFlex>
-        </WorkoutCardFlex>
+        </WorkoutCardContainer>
         )
     }
 }
